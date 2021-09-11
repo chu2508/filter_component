@@ -1,4 +1,4 @@
-import React, { ChangeEventHandler, ComponentType, ReactElement } from "react";
+import React, { ChangeEventHandler, ComponentType } from "react";
 import { CriterionOption, CriterionValue, FilterType, InputType } from "../types";
 
 interface CriterionRowProps {
@@ -29,7 +29,7 @@ const CriterionRow = (props: CriterionRowProps) => {
           };
           return (
             <div key={index}>
-              <select data-testid={'filter_type_select' + index} value={item.type} onChange={filterTypeChange}>
+              <select data-testid={"filter_type_select" + index} value={item.type} onChange={filterTypeChange}>
                 {option.filterOptions.map((filterOption, index) => (
                   <option value={filterOption.filterType} key={index}>
                     {filterOption.filterLabel}
